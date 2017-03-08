@@ -1,0 +1,3115 @@
+2017-03-05 21:27:13.355  INFO 5708 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Sun Mar 05 21:27:13 PST 2017]; root of context hierarchy
+2017-03-05 21:27:13.716  INFO 5708 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-05 21:27:14.296  INFO 5708 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:27:14.360  INFO 5708 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:27:14.689  INFO 5708 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-05 21:27:14.690  INFO 5708 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-05 21:27:14.836  INFO 5708 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Sun Mar 05 21:27:13 PST 2017]; root of context hierarchy
+2017-03-05 21:27:14.838 ERROR 5708 --- [Thread-2] c.t.k.consumer.TmoKafkaConsumerClient    : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-05 21:27:14.839  WARN 5708 --- [Thread-2] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'simpleConsumer': java.util.ConcurrentModificationException: KafkaConsumer is not safe for multi-threaded access
+2017-03-05 21:27:29.240  INFO 9444 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 21:27:29 PST 2017]; root of context hierarchy
+2017-03-05 21:27:29.796  INFO 9444 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-05 21:27:30.590  INFO 9444 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-05 21:27:30.676  INFO 9444 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:27:30.729  INFO 9444 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:27:31.122  INFO 9444 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-05 21:27:31.126  INFO 9444 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-05 21:27:31.327  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 21:27:31.335  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 21:27:31.340  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 21:27:31.372  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 3
+2017-03-05 21:27:31.377  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 21:27:31.428 ERROR 9444 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : exit
+2017-03-05 21:27:31.434 ERROR 9444 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : exit
+2017-03-05 21:27:55.960 ERROR 9444 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : next
+2017-03-05 21:28:28.135  INFO 8936 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 21:28:28 PST 2017]; root of context hierarchy
+2017-03-05 21:28:28.641  INFO 8936 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-05 21:28:29.322  INFO 8936 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-05 21:28:29.385  INFO 8936 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:28:29.438  INFO 8936 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 21:28:29.806  INFO 8936 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-05 21:28:29.810  INFO 8936 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-05 21:28:30.034  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 21:28:30.045  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 21:28:30.048  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 21:28:31.511  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 21:28:31.516  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 21:28:31.543  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 4
+2017-03-05 21:28:31.543  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 4
+2017-03-05 21:28:31.553  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-05 21:28:31.555  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 21:28:39.916 ERROR 8936 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : how is this
+2017-03-05 21:28:43.336 ERROR 8936 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : ok great
+2017-03-05 21:28:49.376 ERROR 8936 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : so you keep getting it now
+2017-03-05 22:15:21.047  INFO 9444 --- [kafka-coordinator-heartbeat-thread | DemoConsumer1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:21.109  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:42.718  WARN 9444 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1149 : {tmotest=INVALID_REPLICATION_FACTOR}
+2017-03-05 22:15:42.718  WARN 8936 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 9382 : {tmotest=INVALID_REPLICATION_FACTOR}
+2017-03-05 22:15:42.892  WARN 9444 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1150 : {tmotest=LEADER_NOT_AVAILABLE}
+2017-03-05 22:15:42.908  WARN 8936 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 9383 : {tmotest=LEADER_NOT_AVAILABLE}
+2017-03-05 22:15:43.064  WARN 9444 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1151 : {tmotest=LEADER_NOT_AVAILABLE}
+2017-03-05 22:15:43.095  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.111  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.173  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 22:15:43.173  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:43.283  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.314  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.366  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:43.478  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.493  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.493  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:43.509  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.532  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.546  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:43.593  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.686  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.702  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:43.702  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.733  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.749  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:43.765  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.869  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:43.870  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.876  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:43.876  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:43.876  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:43.907  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.001  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.001  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:44.001  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.017  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.039  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.044  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.109  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.109  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:44.109  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.156  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.156  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.171  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.218  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.218  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:44.281  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.281  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.296  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.407  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.407  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.422  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.535  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.541  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.546  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.657  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.657  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.657  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.673  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.673  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.704  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:44.798  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.813  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.829  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:44.939  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:44.939  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:44.955  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:45.093  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:45.093  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:45.109  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:45.187  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:45.218  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:45.218  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:45.234  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:45.234  WARN 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Auto offset commit failed for group DemoConsumer1: Offset commit failed with a retriable exception. You should retry committing offsets.
+2017-03-05 22:15:45.249  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:45.391  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:45.407  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:45.423  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:15:45.536  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:45.548  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:45.720  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:15:48.750  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 22:15:48.766  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:15:48.828  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 5
+2017-03-05 22:15:48.828  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 5
+2017-03-05 22:15:48.844  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-05 22:15:48.844  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-05 22:20:43.071  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 22:20:43.085  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:20:44.973  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 22:20:44.988  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:20:45.020  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 6
+2017-03-05 22:20:45.020  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 6
+2017-03-05 22:20:45.051  INFO 8936 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 22:20:45.052  INFO 9444 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-05 22:21:31.459  INFO 8936 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 21:28:28 PST 2017]; root of context hierarchy
+2017-03-05 22:21:31.490  INFO 8936 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-05 22:21:31.506 ERROR 8936 --- [Thread-2] c.t.k.consumer.TmoKafkaConsumerClient    : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-05 22:21:31.506  WARN 8936 --- [Thread-2] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'simpleConsumer': java.util.ConcurrentModificationException: KafkaConsumer is not safe for multi-threaded access
+2017-03-05 22:21:33.565  INFO 9444 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 21:27:29 PST 2017]; root of context hierarchy
+2017-03-05 22:21:33.612  INFO 9444 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-05 22:21:33.612 ERROR 9444 --- [Thread-2] c.t.k.consumer.TmoKafkaConsumerClient    : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-05 22:21:33.612  WARN 9444 --- [Thread-2] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'simpleConsumer': java.util.ConcurrentModificationException: KafkaConsumer is not safe for multi-threaded access
+2017-03-05 22:26:12.488  INFO 10956 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 22:26:12 PST 2017]; root of context hierarchy
+2017-03-05 22:26:13.050  INFO 10956 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-05 22:26:13.816  INFO 10956 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-05 22:26:13.910  INFO 10956 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 22:26:13.972  INFO 10956 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-05 22:26:14.425  INFO 10956 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-05 22:26:14.425  INFO 10956 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-05 22:26:40.666  WARN 10956 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1 : {tmotest=LEADER_NOT_AVAILABLE}
+2017-03-05 22:26:41.119  WARN 10956 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 3 : {tmotest=LEADER_NOT_AVAILABLE}
+2017-03-05 22:26:48.119  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:26:48.135  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-05 22:26:48.135  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:26:48.166  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:26:48.276  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:26:48.276  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:26:48.291  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:26:48.401  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:26:48.401  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:26:48.401  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:26:48.510  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:26:48.510  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:26:48.510  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group DemoConsumer1
+2017-03-05 22:26:48.635  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-05 22:26:48.635  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-05 22:26:48.760  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 1
+2017-03-05 22:26:48.776  INFO 10956 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-05 22:28:29.318 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : new
+2017-03-05 22:28:36.193 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key null:::: Value : this is great
+2017-03-05 23:05:57.161 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : testMessage
+2017-03-05 23:05:59.790 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : testMessage
+2017-03-05 23:06:08.114 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : testMessage
+2017-03-05 23:06:08.125 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : testMessage
+2017-03-05 23:06:15.535 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : new
+2017-03-05 23:06:15.544 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 1:::: Value : new
+2017-03-05 23:06:56.364 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:06:56.374 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:19.303 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:19.313 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:20.969 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:20.988 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:21.462 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:21.488 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:21.664 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:21.689 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:21.867 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:21.884 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:22.064 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:22.089 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:36.384 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.410 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.429 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.448 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.463 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.508 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.513 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:36.519 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:07:43.499 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.529 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.556 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.574 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.600 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.606 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.624 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 11:::: Value : eleven
+2017-03-05 23:07:43.633 ERROR 10956 --- [pool-1-thread-1] com.tmobile.KafkaMessageProcessor        : Message Recieved : Key 10:::: Value : ten
+2017-03-05 23:08:02.244  INFO 10956 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Sun Mar 05 22:26:12 PST 2017]; root of context hierarchy
+2017-03-05 23:08:02.275  INFO 10956 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-05 23:08:02.291 ERROR 10956 --- [Thread-2] c.t.k.consumer.TmoKafkaConsumerClient    : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-05 23:08:02.291  WARN 10956 --- [Thread-2] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'simpleConsumer': java.util.ConcurrentModificationException: KafkaConsumer is not safe for multi-threaded access
+2017-03-06 22:52:43.612  INFO 4424 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Mon Mar 06 22:52:43 PST 2017]; root of context hierarchy
+2017-03-06 22:52:43.929  INFO 4424 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 22:52:44.377  INFO 4424 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:52:44.428  INFO 4424 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:52:44.689  INFO 4424 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 22:52:44.689  INFO 4424 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 22:52:44.830  INFO 4424 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Mon Mar 06 22:52:43 PST 2017]; root of context hierarchy
+2017-03-06 22:52:44.830 ERROR 4424 --- [Thread-2] c.t.k.consumer.TmoKafkaConsumerClient    : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-06 22:56:05.144  INFO 6792 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Mon Mar 06 22:56:05 PST 2017]; root of context hierarchy
+2017-03-06 22:56:05.429  INFO 6792 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 22:56:05.913  INFO 6792 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:56:05.960  INFO 6792 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:56:06.237  INFO 6792 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 22:56:06.237  INFO 6792 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 22:56:06.347  INFO 6792 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@117e949d: startup date [Mon Mar 06 22:56:05 PST 2017]; root of context hierarchy
+2017-03-06 22:56:06.347 ERROR 6792 --- [Thread-2] c.t.b.k.consumer.TmoKafkaConsumerClient  : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-06 22:57:33.302  INFO 6796 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 22:57:33 PST 2017]; root of context hierarchy
+2017-03-06 22:57:33.928  INFO 6796 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 22:57:34.687  INFO 6796 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 22:57:34.780  INFO 6796 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:57:34.827  INFO 6796 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 22:57:35.226  INFO 6796 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 22:57:35.226  INFO 6796 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 22:57:35.444  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-06 22:57:35.444  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 22:57:35.444  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 22:57:37.800  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 6
+2017-03-06 22:57:37.800  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-06 22:59:29.659  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 22:59:29.675  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 22:59:29.736  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 7
+2017-03-06 22:59:29.742  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-06 22:59:29.793 ERROR 6796 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 22:59:32.650 ERROR 6796 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 22:59:33.430 ERROR 6796 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 22:59:33.905 ERROR 6796 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 22:59:44.209 ERROR 6796 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 22:59:44.841  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-06 22:59:44.841  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 22:59:44.873  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 8
+2017-03-06 22:59:44.873  INFO 6796 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-06 22:59:48.007  INFO 6796 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 22:57:33 PST 2017]; root of context hierarchy
+2017-03-06 22:59:48.007  INFO 6796 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-06 22:59:48.007 ERROR 6796 --- [Thread-2] c.t.b.k.consumer.TmoKafkaConsumerClient  : Error while closing consumerKafkaConsumer is not safe for multi-threaded access
+2017-03-06 23:16:50.446  INFO 11508 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:16:50 PST 2017]; root of context hierarchy
+2017-03-06 23:16:50.744  INFO 11508 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:16:51.223  INFO 11508 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:16:51.270  INFO 11508 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:16:51.539  INFO 11508 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:16:51.539  INFO 11508 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:16:51.666  INFO 11508 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:16:50 PST 2017]; root of context hierarchy
+2017-03-06 23:16:58.461  INFO 10904 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:16:58 PST 2017]; root of context hierarchy
+2017-03-06 23:16:59.055  INFO 10904 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:17:11.834  INFO 10904 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 23:17:11.914  INFO 10904 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:17:11.946  INFO 10904 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:17:12.364  INFO 10904 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:17:12.364  INFO 10904 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:17:12.629  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-06 23:17:12.629  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 23:17:12.629  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 23:17:14.687  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 13
+2017-03-06 23:17:14.696  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-06 23:17:51.241  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 23:17:51.256  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 23:17:51.287  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 14
+2017-03-06 23:17:51.303  INFO 10904 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-06 23:17:59.770  INFO 10904 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:16:58 PST 2017]; root of context hierarchy
+2017-03-06 23:17:59.786  INFO 10904 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-06 23:18:10.221  INFO 1060 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:18:10 PST 2017]; root of context hierarchy
+2017-03-06 23:18:10.924  INFO 1060 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:18:11.687  INFO 1060 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 23:18:11.765  INFO 1060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:18:11.812  INFO 1060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:18:12.208  INFO 1060 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:18:12.208  INFO 1060 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:18:12.478  INFO 1060 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-06 23:18:12.494  INFO 1060 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 23:18:12.509  INFO 1060 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 23:18:29.431  INFO 1060 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 15
+2017-03-06 23:18:52.946  INFO 1060 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-06 23:18:52.992 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:52.992 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:52.992 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:53.008 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:53.008 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:58.431 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:18:59.363 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : eh
+2017-03-06 23:19:08.097 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:08.860 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:09.216 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:09.419 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:09.582 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:09.791 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:09.985 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:10.170 ERROR 1060 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:19:12.899  INFO 1060 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:18:10 PST 2017]; root of context hierarchy
+2017-03-06 23:19:12.914  INFO 1060 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-06 23:20:46.019  INFO 14520 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:20:46 PST 2017]; root of context hierarchy
+2017-03-06 23:20:46.659  INFO 14520 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:20:47.387  INFO 14520 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 23:20:47.460  INFO 14520 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:20:47.519  INFO 14520 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:20:49.868  WARN 14520 --- [main] org.apache.kafka.clients.ClientUtils     : Removing server localdfghost:9092 from bootstrap.servers as DNS resolution failed for localdfghost
+2017-03-06 23:20:49.903  INFO 14520 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-03-06 23:20:49.944 ERROR 14520 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:760) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:747) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.tmobile.b2b.SampleKafkaConsumerApplication.main(SampleKafkaConsumerApplication.java:14) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_121]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [demo-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [demo-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [demo-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [demo-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:703) ~[kafka-clients-0.10.1.1.jar!/:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:584) ~[kafka-clients-0.10.1.1.jar!/:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:566) ~[kafka-clients-0.10.1.1.jar!/:na]
+	at com.tmobile.b2b.kafka.consumer.TmoKafkaConsumerClient.initKafkaConsumer(TmoKafkaConsumerClient.java:36) ~[kafka-client-1.0.1.jar!/:na]
+	at com.tmobile.b2b.SimpleConsumer.runConsumer(SimpleConsumer.java:56) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.tmobile.b2b.SimpleConsumer.run(SimpleConsumer.java:48) ~[classes!/:0.0.1-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:776) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	... 14 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:61) ~[kafka-clients-0.10.1.1.jar!/:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:641) ~[kafka-clients-0.10.1.1.jar!/:na]
+	... 20 common frames omitted
+
+2017-03-06 23:20:50.016  INFO 14520 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:20:46 PST 2017]; root of context hierarchy
+2017-03-06 23:20:50.032  INFO 14520 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-06 23:28:24.991  INFO 15032 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:28:24 PST 2017]; root of context hierarchy
+2017-03-06 23:28:25.305  INFO 15032 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:28:25.785  INFO 15032 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:28:25.823  INFO 15032 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:28:28.119  WARN 15032 --- [main] org.apache.kafka.clients.ClientUtils     : Removing server localdfghost:9092 from bootstrap.servers as DNS resolution failed for localdfghost
+2017-03-06 23:28:28.128 ERROR 15032 --- [main] c.t.b.k.consumer.TmoKafkaConsumerClient  : Exception caught while intializing consumer with configuraion :Failed to construct kafka consumer
+2017-03-06 23:28:28.128 ERROR 15032 --- [main] com.tmobile.b2b.SimpleConsumer           : Consumer Exception occured while connecting to kafka :Failed to construct kafka consumer
+2017-03-06 23:28:28.188  INFO 15032 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:28:24 PST 2017]; root of context hierarchy
+2017-03-06 23:29:37.175  INFO 8060 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:29:37 PST 2017]; root of context hierarchy
+2017-03-06 23:29:37.537  INFO 8060 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:29:38.110  INFO 8060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:29:38.186  INFO 8060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:29:40.456  WARN 8060 --- [main] org.apache.kafka.clients.ClientUtils     : Removing server localdfghost:9092 from bootstrap.servers as DNS resolution failed for localdfghost
+2017-03-06 23:29:40.466 ERROR 8060 --- [main] c.t.b.k.consumer.TmoKafkaConsumerClient  : Exception caught while intializing consumer with configuraion :Failed to construct kafka consumer
+2017-03-06 23:29:40.473  INFO 8060 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-03-06 23:29:40.490 ERROR 8060 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:760) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:747) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) [spring-boot-test-autoconfigure-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: com.tmobile.b2b.kafka.exception.KafkaClientConsumerException: Failed to construct kafka consumer
+	at com.tmobile.b2b.kafka.consumer.TmoKafkaConsumerClient.initKafkaConsumer(TmoKafkaConsumerClient.java:48) ~[kafka-client-1.0.1.jar:na]
+	at com.tmobile.b2b.SimpleConsumer.runConsumer(SimpleConsumer.java:63) ~[classes/:na]
+	at com.tmobile.b2b.SimpleConsumer.run(SimpleConsumer.java:53) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:776) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	... 33 common frames omitted
+
+2017-03-06 23:29:40.490  INFO 8060 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:29:37 PST 2017]; root of context hierarchy
+2017-03-06 23:29:40.609  INFO 8060 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5d8bafa9: startup date [Mon Mar 06 23:29:40 PST 2017]; root of context hierarchy
+2017-03-06 23:29:40.743  INFO 8060 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:29:40.883  INFO 8060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:29:40.885  INFO 8060 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localdfghost:9092]
+	check.crcs = true
+	client.id = consumer-2
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:29:40.887  WARN 8060 --- [main] org.apache.kafka.clients.ClientUtils     : Removing server localdfghost:9092 from bootstrap.servers as DNS resolution failed for localdfghost
+2017-03-06 23:29:40.889 ERROR 8060 --- [main] c.t.b.k.consumer.TmoKafkaConsumerClient  : Exception caught while intializing consumer with configuraion :Failed to construct kafka consumer
+2017-03-06 23:29:40.891  INFO 8060 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-03-06 23:29:40.891 ERROR 8060 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:760) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:747) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47) [spring-boot-test-autoconfigure-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: com.tmobile.b2b.kafka.exception.KafkaClientConsumerException: Failed to construct kafka consumer
+	at com.tmobile.b2b.kafka.consumer.TmoKafkaConsumerClient.initKafkaConsumer(TmoKafkaConsumerClient.java:48) ~[kafka-client-1.0.1.jar:na]
+	at com.tmobile.b2b.SimpleConsumer.runConsumer(SimpleConsumer.java:63) ~[classes/:na]
+	at com.tmobile.b2b.SimpleConsumer.run(SimpleConsumer.java:53) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:776) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	... 31 common frames omitted
+
+2017-03-06 23:29:40.891  INFO 8060 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5d8bafa9: startup date [Mon Mar 06 23:29:40 PST 2017]; root of context hierarchy
+2017-03-06 23:29:40.907 ERROR 8060 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3439f68d] to prepare test instance [com.tmobile.b2b.SampleKafkaConsumerApplicationTests@6cc7b4de]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47) ~[spring-boot-test-autoconfigure-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:760) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:747) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	... 25 common frames omitted
+Caused by: com.tmobile.b2b.kafka.exception.KafkaClientConsumerException: Failed to construct kafka consumer
+	at com.tmobile.b2b.kafka.consumer.TmoKafkaConsumerClient.initKafkaConsumer(TmoKafkaConsumerClient.java:48) ~[kafka-client-1.0.1.jar:na]
+	at com.tmobile.b2b.SimpleConsumer.runConsumer(SimpleConsumer.java:63) ~[classes/:na]
+	at com.tmobile.b2b.SimpleConsumer.run(SimpleConsumer.java:53) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:776) ~[spring-boot-1.5.2.RELEASE.jar:1.5.2.RELEASE]
+	... 31 common frames omitted
+
+2017-03-06 23:30:08.683  INFO 3980 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:30:08 PST 2017]; root of context hierarchy
+2017-03-06 23:30:09.007  INFO 3980 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:30:09.440  INFO 3980 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:09.497  INFO 3980 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:09.770  INFO 3980 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:30:09.771  INFO 3980 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:30:09.887  INFO 3980 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Mon Mar 06 23:30:08 PST 2017]; root of context hierarchy
+2017-03-06 23:30:24.028  INFO 5520 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:30:24 PST 2017]; root of context hierarchy
+2017-03-06 23:30:24.606  INFO 5520 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:30:25.631  INFO 5520 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 23:30:25.781  INFO 5520 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:25.853  INFO 5520 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:26.396  INFO 5520 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:30:26.411  INFO 5520 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:30:26.627  INFO 5520 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-06 23:30:26.642  INFO 5520 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 23:30:26.642  INFO 5520 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 23:30:26.681  INFO 5520 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 17
+2017-03-06 23:30:26.688  INFO 5520 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-06 23:30:30.537 ERROR 5520 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:30:31.158 ERROR 5520 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:30:31.576 ERROR 5520 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:30:31.757 ERROR 5520 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:30:31.976 ERROR 5520 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 11:::: Value : new
+2017-03-06 23:30:33.529  INFO 5520 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:30:24 PST 2017]; root of context hierarchy
+2017-03-06 23:30:33.544  INFO 5520 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-06 23:30:52.301  INFO 10732 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:30:52 PST 2017]; root of context hierarchy
+2017-03-06 23:30:52.872  INFO 10732 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-06 23:30:53.603  INFO 10732 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-06 23:30:53.682  INFO 10732 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:53.733  INFO 10732 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-06 23:30:54.128  INFO 10732 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-06 23:30:54.128  INFO 10732 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-06 23:30:54.349  WARN 10732 --- [pool-1-thread-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1 : {~!@~!~!=INVALID_TOPIC_EXCEPTION}
+2017-03-06 23:30:54.367  INFO 10732 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-06 23:30:54.375  INFO 10732 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-06 23:30:54.378  INFO 10732 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-06 23:31:02.823  INFO 10732 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 18
+2017-03-06 23:31:02.863  INFO 10732 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-06 23:31:06.630  INFO 10732 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Mon Mar 06 23:30:52 PST 2017]; root of context hierarchy
+2017-03-06 23:31:06.646  INFO 10732 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 12:16:30.274  INFO 10496 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 12:16:30 PST 2017]; root of context hierarchy
+2017-03-07 12:16:30.925  INFO 10496 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 12:16:31.853  INFO 10496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 12:16:31.931  INFO 10496 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 12:16:31.978  INFO 10496 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 12:16:32.915  INFO 10496 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 12:16:32.915  INFO 10496 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 12:16:33.196  INFO 10496 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-07 12:16:33.212  INFO 10496 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-07 12:16:33.212  INFO 10496 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-07 12:16:33.258  INFO 10496 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 20
+2017-03-07 12:16:33.258  INFO 10496 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-07 12:16:33.290  INFO 10496 --- [pool-1-thread-1] o.a.k.c.consumer.internals.Fetcher       : Fetch offset 60 is out of range for partition tmotest-0, resetting offset
+2017-03-07 12:18:07.080 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 12:18:07.091 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 12:18:37.359 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 12:18:37.369 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 12:18:37.521 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 12:18:37.534 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 12:18:37.841 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 12:18:37.860 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 12:18:37.989 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 12:18:38.006 ERROR 10496 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 12:18:45.572  INFO 10496 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 12:16:30 PST 2017]; root of context hierarchy
+2017-03-07 12:18:45.588  INFO 10496 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 12:20:04.808  INFO 488 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Tue Mar 07 12:20:04 PST 2017]; root of context hierarchy
+2017-03-07 12:20:05.074  INFO 488 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 12:20:05.536  INFO 488 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 12:20:05.598  INFO 488 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 12:20:05.895  INFO 488 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 12:20:05.895  INFO 488 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 12:20:06.005  INFO 488 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Tue Mar 07 12:20:04 PST 2017]; root of context hierarchy
+2017-03-07 15:32:10.831  INFO 7376 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Tue Mar 07 15:32:10 PST 2017]; root of context hierarchy
+2017-03-07 15:32:11.112  INFO 7376 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 15:32:11.551  INFO 7376 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:32:11.598  INFO 7376 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:32:11.879  INFO 7376 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 15:32:11.879  INFO 7376 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 15:32:11.988  INFO 7376 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977: startup date [Tue Mar 07 15:32:10 PST 2017]; root of context hierarchy
+2017-03-07 15:47:17.012  INFO 10688 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 15:47:17 PST 2017]; root of context hierarchy
+2017-03-07 15:47:17.637  INFO 10688 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 15:47:18.309  INFO 10688 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 15:47:18.371  INFO 10688 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:47:18.418  INFO 10688 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:47:18.809  INFO 10688 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 15:47:18.809  INFO 10688 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 15:47:19.012  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-07 15:47:19.028  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-07 15:47:19.028  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-07 15:47:19.059  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 22
+2017-03-07 15:47:19.059  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-07 15:48:55.127  INFO 2092 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 15:48:55 PST 2017]; root of context hierarchy
+2017-03-07 15:48:55.643  INFO 2092 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 15:48:56.362  INFO 2092 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 15:48:56.424  INFO 2092 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:48:56.487  INFO 2092 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:48:56.877  INFO 2092 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 15:48:56.893  INFO 2092 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 15:48:57.112  INFO 2092 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer1.
+2017-03-07 15:48:57.127  INFO 2092 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-07 15:48:57.127  INFO 2092 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-07 15:48:58.658  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-07 15:48:58.674  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-07 15:48:58.690  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 23
+2017-03-07 15:48:58.705  INFO 2092 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 23
+2017-03-07 15:48:58.705  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group DemoConsumer1
+2017-03-07 15:48:58.721  INFO 2092 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-07 15:54:10.582 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:20.706 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:21.435 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:21.849 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:22.194 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:31.217 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:31.227 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 111:::: Value : hi Vidya
+2017-03-07 15:54:36.769 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:54:36.785 ERROR 2092 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:54:53.951  INFO 2092 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 15:48:55 PST 2017]; root of context hierarchy
+2017-03-07 15:54:53.951  INFO 2092 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 15:55:26.372  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer1
+2017-03-07 15:55:26.387  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer1
+2017-03-07 15:55:26.419  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer1 with generation 24
+2017-03-07 15:55:26.419  INFO 10688 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer1
+2017-03-07 15:55:26.450 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:55:26.450 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:55:26.450 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:55:26.466 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:55:26.466 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:55:26.466 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:56:53.497  INFO 4612 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41906a77: startup date [Tue Mar 07 15:56:53 PST 2017]; root of context hierarchy
+2017-03-07 15:56:54.078  INFO 4612 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [kafkaconfig.xml]
+2017-03-07 15:56:54.821  INFO 4612 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 15:56:54.884  INFO 4612 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:56:54.930  INFO 4612 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = DemoConsumer
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-03-07 15:56:55.375  INFO 4612 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2017-03-07 15:56:55.375  INFO 4612 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2017-03-07 15:56:55.562  INFO 4612 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group DemoConsumer.
+2017-03-07 15:56:55.578  INFO 4612 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group DemoConsumer
+2017-03-07 15:56:55.578  INFO 4612 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group DemoConsumer
+2017-03-07 15:56:55.609  INFO 4612 --- [pool-1-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group DemoConsumer with generation 1
+2017-03-07 15:56:55.609  INFO 4612 --- [pool-1-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [tmotest-0] for group DemoConsumer
+2017-03-07 15:57:15.326 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:57:15.325 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 113:::: Value : hi Vidya
+2017-03-07 15:57:31.562 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:31.566 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:32.649 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:32.651 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.075 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.080 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.503 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.503 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.903 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:33.905 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:34.335 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:34.338 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:34.804 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 15:57:34.808 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2222:::: Value : hi Vidya
+2017-03-07 16:00:03.309 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 16:00:03.309 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 1:::: Value : {"orderId":1,"itemNumber":"Item1","catalogId":"test"}
+2017-03-07 16:00:03.324 ERROR 10688 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}
+2017-03-07 16:00:03.324 ERROR 4612 --- [pool-1-thread-1] com.tmobile.b2b.KafkaMessageProcessor    : Message Recieved : Key 2:::: Value : {"orderId":2,"itemNumber":"Item2","catalogId":"test2"}

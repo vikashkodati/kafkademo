@@ -1,0 +1,6 @@
+com\tmobile\b2b\kafka\testcases\KafkaSyncMessageTest.class
+com\tmobile\b2b\kafka\test\consumer\KafkaAsyncMessageTestProcessor.class
+com\tmobile\b2b\kafka\testsuite\KafkaTestSuite.class
+com\tmobile\b2b\kafka\test\producer\SampleProducerCallback.class
+com\tmobile\b2b\kafka\test\consumer\KafkaMessageTestProcessor.class
+com\tmobile\b2b\kafka\testcases\KafkaASyncMessageTest.class

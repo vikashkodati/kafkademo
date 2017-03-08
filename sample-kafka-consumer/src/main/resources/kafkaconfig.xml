@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="consumerConfig"
+		class="com.tmobile.b2b.kafka.configuration.KafkaConsumerConfiguration">
+		<property name="bootStrapServers" value="${kafka.bootstrap.servers}" />
+		<property name="groupId" value="${kafka.consumergroup.name}" />
+		<property name="autoCommit" value="${kafka.autocommit.enabled}" />
+		<property name="autoCommitIntervalMs" value="${kafka.autocommit.interval}" />
+		<property name="sessionTimeoutMs" value="${kafka.session.timout}" />
+		<property name="keyDeSerializer"
+			value="${kafka.key.deserializer}" />
+		<property name="valueDeSerializer"
+			value="${kafka.value.deserializer}" />
+	</bean>
+
+	<bean id="consumerClient" class="com.tmobile.b2b.kafka.consumer.TmoKafkaConsumerClient">
+
+	</bean>
+
+	<bean id="messageProcessor" class="com.tmobile.b2b.KafkaMessageProcessor">
+	</bean>
+
+</beans>

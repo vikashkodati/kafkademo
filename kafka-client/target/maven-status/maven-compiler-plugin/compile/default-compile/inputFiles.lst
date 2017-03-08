@@ -1,0 +1,16 @@
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\configuration\KafkaConstants.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\consumer\TmoKafkaConsumerThread.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\exception\KafkaConsumerConfigurationException.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\producer\TmoKafkaProducerClient.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\configuration\KafkaProducerConfiguration.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\consumer\TopicConsumer.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\exception\KafkaClientConsumerException.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\consumer\exception\ConsumerException.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\exception\KafkaProducerConfigurationException.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\configuration\KafkaConsumerConfiguration.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\consumer\TmoKafkaConsumerClient.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\producer\TopicProducer.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\processor\MessageProcessor.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\producer\AsyncTmoKafkaProducerThread.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\producer\exception\ProducerException.java
+D:\Projects\TMO\Workspaces\TmoKafka\kafka-client\src\main\java\com\tmobile\b2b\kafka\exception\KafkaClientProducerException.java
